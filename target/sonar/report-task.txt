@@ -1,0 +1,5 @@
+projectKey=com.miksonx:webapp
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/com.miksonx:webapp
+ceTaskId=AWU6xAoWCgD_7QqUbuSZ
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWU6xAoWCgD_7QqUbuSZ

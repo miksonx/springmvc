@@ -1,0 +1,38 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: todos
+  labels:
+    app: todos
+spec:
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: todos
+        tier: todos
+    spec:
+      containers:
+      - image: 127.0.0.1:30400/todos:latest
+        name: todos
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+          name: todos
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: todos
+  labels:
+    app: todos
+spec:
+  ports:
+    - port: 80
+      targetPort: 8080
+  selector:
+    app: todos
+    tier: todos
+  type: NodePort
