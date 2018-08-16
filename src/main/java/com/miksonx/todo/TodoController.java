@@ -22,9 +22,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import com.miksonx.exception.ExceptionController;
+import com.miksonx.common.ExceptionController;
 import com.miksonx.model.Todo;
 import com.miksonx.service.TodoService;
+
 
 
 
@@ -80,7 +81,12 @@ public class TodoController {
 
 		return principal.toString();
 	}
-
+	
+	@RequestMapping(value = "/about", method = RequestMethod.GET)
+	public String showAboutPage() {
+		return "about";
+	}
+	
 	@RequestMapping(value = "/update-todo", method = RequestMethod.GET)
 	public String showUpdateTodoPage(ModelMap model, @RequestParam int id) {
 		model.addAttribute("todo", service.retrieveTodo(id));
