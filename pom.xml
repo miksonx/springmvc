@@ -1,12 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-<parent>
-    <groupId>com.atlassian.bamboo</groupId>
-    <artifactId>bamboo-specs-parent</artifactId>
-    <version>6.1.0</version>
-    <relativePath/>
-  </parent>
+
 
   <groupId>com.miksonx</groupId>
   <artifactId>webapp</artifactId>
@@ -75,22 +70,16 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>2.5.3</version>
 		</dependency>
-		<dependency>
-      <groupId>com.atlassian.bamboo</groupId>
-      <artifactId>bamboo-specs-api</artifactId>
-       </dependency>
-    <dependency>
-      <groupId>com.atlassian.bamboo</groupId>
-      <artifactId>bamboo-specs</artifactId>
-      <version>6.5.0</version>
-    </dependency>
 
-    <!-- Test dependencies -->
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
-    </dependency>
+	    <!-- Test dependencies -->
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>4.12</version>
+		    <scope>test</scope>
+		</dependency>
+
     
 	</dependencies>
 
