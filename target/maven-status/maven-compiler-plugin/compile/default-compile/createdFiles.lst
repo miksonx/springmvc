@@ -1,0 +1,9 @@
+com/miksonx/security/SecurityConfiguration.class
+com/miksonx/todo/TodoController.class
+com/miksonx/welcome/WelcomeController.class
+com/miksonx/common/ExceptionController.class
+com/miksonx/login/LoginService.class
+com/miksonx/login/LogoutController.class
+com/miksonx/todo/TodoRestController.class
+com/miksonx/model/Todo.class
+com/miksonx/service/TodoService.class
