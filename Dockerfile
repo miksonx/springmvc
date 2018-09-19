@@ -37,6 +37,7 @@ RUN set -x \
 #ADD ./target/*.war $CATALINA_HOME/webapps/
 COPY tomcat-users.xml /usr/local/tomcat/conf/
 COPY context.xml $CATALINA_HOME/webapps/manager/META-INF/
+COPY /target/webapp-0.0.1-todos.war /usr/local/tomcat/webapps/
 #ADD http://192.168.10.119:8081/artifactory/libs-release-local/com/miksonx/webapp/0.0.1-todos/webapp-0.0.1-todos.war /usr/local/tomcat/webapps/
 #ADD target/webapp*todos*.war /usr/local/tomcat/webapps/todos.war
 
