@@ -34,7 +34,7 @@ maven-build:
   script:
     - "mvn install $MAVEN_OPTS $SONAR_PLUGIN $SONAR_OPTIONS -Dsonar.login=$SONAR_ANALYZE_TOKEN"
     # print coverage in console so that gitlab can pick it up
-    - awk -F"," '{ instructions += $4 + $5; covered += $5 } END { print covered, "/", instructions, " instructions covered"; print 100*covered/instructions, "% covered" }' target/site/jacoco/jacoco1.csv
+    #- awk -F"," '{ instructions += $4 + $5; covered += $5 } END { print covered, "/", instructions, " instructions covered"; print 100*covered/instructions, "% covered" }' target/site/jacoco/jacoco1.csv
 
   #  - "mvn clean install pitest:mutationCoverage"
   # Gitlab coverage regex: mutations Killed [0-9].* \((.*?)%\)
