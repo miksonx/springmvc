@@ -46,7 +46,7 @@ docker-build:
 
 slack-success:
   only:
-    - develop
+    - master
   stage: post-package
   image: appropriate/curl
   script:
@@ -54,7 +54,7 @@ slack-success:
 
 slack-failed:
   only:
-    - develop
+    - master
   stage: post-package
   when: on_failure
   image: appropriate/curl
