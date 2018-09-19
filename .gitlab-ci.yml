@@ -32,7 +32,7 @@ maven-build:
   before_script:
     - ping -c 3 www.google.com
   script:
-    - "mvn install spring-boot:repackage $MAVEN_OPTS $SONAR_PLUGIN $SONAR_OPTIONS -Dsonar.login=$SONAR_ANALYZE_TOKEN"
+    - "mvn install $MAVEN_OPTS $SONAR_PLUGIN $SONAR_OPTIONS -Dsonar.login=$SONAR_ANALYZE_TOKEN"
     # print coverage in console so that gitlab can pick it up
     - awk -F"," '{ instructions += $4 + $5; covered += $5 } END { print covered, "/", instructions, " instructions covered"; print 100*covered/instructions, "% covered" }' target/site/jacoco/jacoco1.csv
 
